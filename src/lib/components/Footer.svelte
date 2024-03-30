@@ -1,4 +1,4 @@
-<footer class="bg-gradient-to-t from-purple-200 px-4 py-8 bg-gray-100 text-gray-600">
+<footer class="px-4 py-8 bg-gray-100 text-gray-600">
 	<div class="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
 		<div class="flex flex-row pr-3 space-x-4 sm:space-x-8">
 			<img src="/logo-almagazi.svg" alt="logo Almagazi" class="w-16 h-16">

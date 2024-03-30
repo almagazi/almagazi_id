@@ -1,4 +1,4 @@
-<section class="bg-gray-100 text-gray-800" id='stack'>
+<section class="bg-gradient-to-b from-purple-300 to-purple-100 bg-gray-100 text-gray-800" id='stack'>
 	<div class="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
 		<h2 class="text-3xl font-bold">Our stack is</h2>
 		<div class="flex flex-wrap justify-center lg:justify-between">
