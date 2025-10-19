@@ -4,7 +4,9 @@
   import Stacks from '$lib/components/Stacks.svelte'
   import Stats from '$lib/components/Stats.svelte'
 </script>
-<Hero />
-<Stacks/>
-<Features />
-<Stats />
+<div class="flex flex-col space-y-16 md:space-y-24">
+  <Hero />
+  <Stacks/>
+  <Features />
+  <Stats />
+</div>
