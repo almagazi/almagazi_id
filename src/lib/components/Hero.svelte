@@ -1,3 +1,10 @@
+<script>
+  import { contactModalOpen } from '$lib/stores.js'; // 1. Import store
+
+  function openModal() {
+    $contactModalOpen = true; // 2. Set store value
+  }
+</script>
 <section
 	class="dark:bg-gray-100 dark:text-gray-800 bg-cover bg-center relative"
 	style="background-image: url('./phil-5i0GnoTTjSE-unsplash.jpg')"
@@ -21,6 +28,7 @@
 					 dark:bg-orange-600 dark:text-gray-50
 					 hover:dark:bg-orange-700 transition-all duration-300
 					 active:scale-95"
+				on:click={openModal}
 			>
 				Get started
 			</button>
