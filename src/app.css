@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  /* This is the magic property! */
+  scroll-padding-top: var(--header-height, 6rem); /* 6rem is just a fallback */
+  
+  /* This adds a nice smooth scroll animation */
+  scroll-behavior: smooth;
+}

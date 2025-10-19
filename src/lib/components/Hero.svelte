@@ -6,7 +6,6 @@
 		<p class="px-8 mt-8 mb-12 text-lg">Streamline Your Business Operations and Stay Ahead of the Curve</p>
 		<div class="flex flex-wrap justify-center">
 			<button class="px-8 py-3 m-2 text-lg font-semibold rounded dark:bg-orange-600 dark:text-gray-50">Get started</button>
-			<!-- <button class="px-8 py-3 m-2 text-lg border rounded dark:text-gray-900 dark:border-gray-300">Learn more</button> -->
 		</div>
 	</div>
 </section>
