@@ -4,11 +4,11 @@
 			<img src="/logo-almagazi.svg" alt="logo Almagazi" class="w-16 h-16">
 			<ul class="flex flex-wrap items-center space-x-4 sm:space-x-8">
 				<li>
-					&copy; 2024 PT Amal Madani Gapura Zakiya
+					&copy; 2025 PT Amal Madani Gapura Zakiya
 				</li>
 			</ul>
 		</div>
-		<ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
+		<!-- <ul class="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
 			<li>
 				<a rel="noopener noreferrer" href="#">Instagram</a>
 			</li>
@@ -18,6 +18,6 @@
 			<li>
 				<a rel="noopener noreferrer" href="#">Twitter</a>
 			</li>
-		</ul>
+		</ul> -->
 	</div>
 </footer>

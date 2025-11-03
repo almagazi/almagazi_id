@@ -1,18 +1,27 @@
-<script>
+<script lang="ts">
   import { contactModalOpen } from '$lib/stores.js';
   import { fly } from 'svelte/transition';
   import { enhance } from '$app/forms';
   import { navigating } from '$app/stores';
+  import type { ActionResult } from '@sveltejs/kit';
 
   // --- Form State ---
+  interface FormErrors {
+    name?: string;
+    email?: string;
+    whatsapp?: string;
+    contact?: string;
+    message?: string;
+  }
+
   let name = '';
   let email = '';
   let whatsapp = '';
   let message = '';
-  let errors = {};
+  let errors: FormErrors = {};
   let showSuccessMessage = false; // <-- New state for the success message
 
-  $: submitting = $navigating && $navigating.type === 'action';
+  $: submitting = $navigating && $navigating.type === 'form';
 
   function closeModal() {
     $contactModalOpen = false;
@@ -31,7 +40,10 @@
   }
 
   // This function runs after the form action completes
-  function onFormResult({ result }) {
+  /**
+   * @param {{ result: ActionResult }} { result }
+   */
+  function onFormResult({ result }: { result: ActionResult }) {
     if (result.type === 'success') {
       resetForm();
 
@@ -85,16 +97,16 @@
               d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
             />
           </svg>
-          <h2 class="text-2xl font-bold mt-4">Message Sent!</h2>
+          <h2 class="text-2xl font-bold mt-4">Pesan Terkirim!</h2>
           <p class="text-gray-600 mt-2">
-            Thanks for reaching out. We'll be in touch soon.
+            Terima kasih telah menghubungi. Kami akan segera menghubungi Anda.
           </p>
         </div>
       {:else}
         <div>
           <div class="flex justify-between items-center mb-4">
-            <h2 class="text-2xl font-bold">Get Started</h2>
-            <button on:click={closeModal} aria-label="Close modal">
+            <h2 class="text-2xl font-bold">Hubungi Kami</h2>
+            <button on:click={closeModal} aria-label="Tutup modal">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -122,7 +134,7 @@
             }}
           >
             <div>
-              <label for="name" class="block text-sm font-medium text-gray-700">Name*</label>
+              <label for="name" class="block text-sm font-medium text-gray-700">Nama*</label>
               <input
                 bind:value={name}
                 name="name"
@@ -157,13 +169,13 @@
 
             <div class="flex items-center">
               <hr class="flex-grow border-t border-gray-300" />
-              <span class="px-2 text-sm text-gray-500">OR</span>
+              <span class="px-2 text-sm text-gray-500">ATAU</span>
               <hr class="flex-grow border-t border-gray-300" />
             </div>
 
             <div>
               <label for="whatsapp" class="block text-sm font-medium text-gray-700">
-                WhatsApp Number
+                Nomor WhatsApp
               </label>
               <input
                 bind:value={whatsapp}
@@ -185,7 +197,7 @@
 
             <div>
               <label for="message" class="block text-sm font-medium text-gray-700">
-                How can we help?*
+                Apa yang bisa kami bantu?*
               </label>
               <textarea
                 bind:value={message}
@@ -209,7 +221,7 @@
                        transition-all duration-300 active:scale-95 disabled:opacity-50"
                 disabled={submitting}
               >
-                {submitting ? 'Sending...' : 'Send Message'}
+                {submitting ? 'Mengirim...' : 'Kirim Pesan'}
               </button>
             </div>
           </form>

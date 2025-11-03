@@ -14,18 +14,18 @@ export const actions = {
 
     // --- Server-Side Validation ---
     const errors = {};
-    const cleanWhatsapp = (whatsapp || '').replace(/[\s-()]/g, '');
+    const cleanWhatsapp = String(whatsapp || '').replace(/[\s-()]/g, '');
 
-    if (!name) errors.name = 'Name is required.';
-    if (!message) errors.message = 'Message is required.';
+    if (!name) errors.name = 'Nama wajib diisi.';
+    if (!message) errors.message = 'Pesan wajib diisi.';
     if (!email && !cleanWhatsapp) {
-      errors.contact = 'Please provide either an email or a WhatsApp number.';
+      errors.contact = 'Harap berikan email atau nomor WhatsApp.';
     }
-    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      errors.email = 'Please enter a valid email address.';
+    if (email && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(String(email))) {
+      errors.email = 'Harap masukkan alamat email yang valid.';
     }
     if (cleanWhatsapp && !/(^08\d{8,11}$)|(^\+[1-9]\d{9,14}$)/.test(cleanWhatsapp)) {
-      errors.whatsapp = 'Please enter a valid format (e.g., 08123456789).';
+      errors.whatsapp = 'Harap masukkan format yang valid (misalnya, 08123456789).';
     }
 
     if (Object.keys(errors).length > 0) {
@@ -40,7 +40,7 @@ export const actions = {
     if (cleanWhatsapp) {
       subject = `Website Lead ${cleanWhatsapp}`;
       mailBody = `New lead from: ${name}\nWhatsApp: ${cleanWhatsapp}\n\nMessage:\n${message}`;
-      whatsappLink = `https://wa.me/62816782197?text=${encodeURIComponent(message)}`;
+      whatsappLink = `https://wa.me/62816782197?text=${encodeURIComponent(String(message))}`;
     } else {
       subject = 'Website Lead';
       mailBody = `New lead from: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
@@ -67,7 +67,7 @@ export const actions = {
       return { success: true, whatsappLink: whatsappLink };
     } catch (error) {
       console.error('Resend API Error:', error);
-      errors.submit = 'Failed to send message. Please try again later.';
+      errors.submit = 'Gagal mengirim pesan. Silakan coba lagi nanti.';
       return fail(500, { errors });
     }
   }

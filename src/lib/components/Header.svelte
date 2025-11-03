@@ -41,7 +41,7 @@
 		<a
 			rel="noopener noreferrer"
 			href="#"
-			aria-label="Back to homepage"
+			aria-label="Kembali ke beranda"
 			class="flex items-center p-2"
 			on:click={() => handleLinkClick('#')}
 		>
@@ -57,7 +57,7 @@
 					class:dark:border-orange-600={isHome}
 					on:click={() => handleLinkClick('#')}
 				>
-					Home
+					Beranda
 				</a>
 			</li>
 			<li class="flex">
@@ -69,7 +69,7 @@
 					class:dark:border-orange-600={activeHash === '#stack'}
 					on:click={() => handleLinkClick('#stack')}
 				>
-					Stack
+					Teknologi
 				</a>
 			</li>
 			<li class="flex">
@@ -81,14 +81,26 @@
 					class:dark:border-orange-600={activeHash === '#features'}
 					on:click={() => handleLinkClick('#features')}
 				>
-					Services
+					Layanan
+				</a>
+			</li>
+			<li class="flex">
+				<a
+					rel="noopener noreferrer"
+					href="#products"
+					class="flex items-center px-4 -mb-1 border-b-2 dark:border-"
+					class:dark:text-orange-600={activeHash === '#products'}
+					class:dark:border-orange-600={activeHash === '#products'}
+					on:click={() => handleLinkClick('#products')}
+				>
+					Produk
 				</a>
 			</li>
 		</ul>
 		<button
 			class="flex justify-end p-4 md:hidden"
 			on:click={() => (menuOpen = true)}
-			aria-label="Open menu"
+			aria-label="Buka menu"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -117,7 +129,7 @@
 		<button
 			class="absolute top-0 right-0 p-8"
 			on:click={() => (menuOpen = false)}
-			aria-label="Close menu"
+			aria-label="Tutup menu"
 		>
 			<svg
 				xmlns="http://www.w3.org/2000/svg"
@@ -139,6 +151,9 @@
 		</a>
 		<a rel="noopener noreferrer" href="#features" on:click={() => handleLinkClick('#features')}>
 			Services
+		</a>
+		<a rel="noopener noreferrer" href="#products" on:click={() => handleLinkClick('#products')}>
+			Products
 		</a>
 	</div>
 {/if}

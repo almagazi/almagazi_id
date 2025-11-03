@@ -1,6 +1,6 @@
 <section class="bg-gradient-to-b from-purple-300 to-purple-100 bg-gray-100 text-gray-800" id='stack'>
 	<div class="container p-6 mx-auto space-y-6 text-center lg:p-8 lg:space-y-8">
-		<h2 class="text-3xl font-bold">Our stack is</h2>
+		<h2 class="text-3xl font-bold">Teknologi kami adalah</h2>
 		<div class="flex flex-wrap justify-center lg:justify-between">
 			<img src='/logo-oracle.svg' alt='logo Oracle' class="w-12 h-12 mx-10 my-6 fill-current object-contain md:mx-12 lg:m-0 text-gray-600"/>
 			<img src='/logo-ifs.png' alt='logo IFS' class="w-12 h-12 mx-10 my-6 fill-current object-contain md:mx-12 lg:m-0 text-gray-600"/>
