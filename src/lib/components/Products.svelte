@@ -11,7 +11,9 @@
       iconPath: `M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 
         8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 
         016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 
-        0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25`
+        0018 18c-2.305 0-4.408.867-6 2.292m0-14.25v14.25`,
+      clickable: true,
+      href: 'http://maragha.id'
     },
     {
       title: 'Sistem Keuangan Perusahaan Jasa',
@@ -52,7 +54,9 @@
         12a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H18zM19.5 
         13.5a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H19.5zM18 
         16.5a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H18zM19.5 
-        18a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H19.5z`
+        18a.75.75 0 000 1.5h.75a.75.75 0 000-1.5H19.5z`,
+      clickable: true,
+      openContactModal: true
     },
     {
       title: 'Sistem Keuangan Non Profit',
@@ -62,7 +66,9 @@
       // Ikon untuk 'amal' atau 'nirlaba' (Heroicon: heart)
       iconPath: `M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 
         2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 
-        8.25c0 7.22 9 12 9 12s9-4.78 9-12z`
+        8.25c0 7.22 9 12 9 12s9-4.78 9-12z`,
+      clickable: true,
+      openContactModal: true
     }
   ];
 </script>
@@ -84,6 +90,9 @@
           title={product.title}
           description={product.description}
           iconPath={product.iconPath}
+          clickable={product.clickable}
+          href={product.href}
+          openContactModal={product.openContactModal}
         />
       {/each}
     </dl>
