@@ -69,7 +69,7 @@ export const PROJECTS: Project[] = [
   },
   {
     id: 2,
-    title: "Sistem Keuangan Perusahaan Jasa",
+    title: "Mimar",
     description: "Solusi SaaS modern untuk mengelola keuangan perusahaan jasa. Lacak proyek, kelola tagihan (invoicing), dan pantau profitabilitas dengan mudah. Didesain untuk agensi, konsultan, dan pekerja jasa.",
     tags: ["SaaS", "ERP", "Accounting", "Project"],
     imageUrl: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop",
