@@ -60,7 +60,7 @@
       <div class="text-left">
         <h4 class="text-white font-bold text-xl mb-6 flex items-center gap-3">
           <div class="w-2 h-2 bg-[#FF6600] rounded-full"></div>
-          Kantor Pusat
+          PT Amal Madani Gapura Zakiya
         </h4>
         <ul class="space-y-4 text-slate-400">
           <li class="flex items-center gap-3">
@@ -82,9 +82,9 @@
           <a href={CONTACT_INFO.socials.linkedin} class="p-3 bg-white/5 hover:bg-[#0077b5] hover:text-white rounded-full transition-all text-white">
             <Linkedin size={20} />
           </a>
-          <a href={CONTACT_INFO.socials.twitter} class="p-3 bg-white/5 hover:bg-[#1DA1F2] hover:text-white rounded-full transition-all text-white">
+          <!-- <a href={CONTACT_INFO.socials.twitter} class="p-3 bg-white/5 hover:bg-[#1DA1F2] hover:text-white rounded-full transition-all text-white">
             <Twitter size={20} />
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
