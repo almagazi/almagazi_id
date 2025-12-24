@@ -1,0 +1,11 @@
+# Robots.txt for Almagazi.id
+# Allow all crawlers to access the site
+User-agent: *
+Allow: /
+
+# Disallow specific paths if needed
+# Disallow: /admin/
+# Disallow: /private/
+
+# Sitemap location
+Sitemap: https://almagazi.id/sitemap.xml
